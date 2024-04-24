@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:cornsilk;
+  border-radius: 30px;
+}
+
+.img1 {
+  display: flex;
+}
+
+nav a {
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  margin: 1rem;
+  color: #5e503f;
+}
+
+.active {
+  font-weight: 700;
+}

@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .container {
+    width: 350px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  
+  #card {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+  
+  .imgPok {
+    display: block;
+    width: 200px;
+    max-height: 200px;
+    position: relative;
+    margin: 20px auto;
+  }
+  
+  .imgStats {
+    width: 1.5rem;
+  }
+  
+  .hp {
+    width: 80px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 30px;
+    margin-left: auto;
+    font-weight: 400;
+    color: black;
+  }
+  
+  .poke-name {
+    text-align: center;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .types {
+    color: black;
+    margin: 20px;
+  }
+  
+  .hp span {
+    border-radius: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+  }
+  
+  .types span {
+    display: block;
+    border-radius: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+  }
+  
+  .types span {
+    padding: 3% 15px;
+  }
+  
+  .stats {
+    margin: 35px;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
