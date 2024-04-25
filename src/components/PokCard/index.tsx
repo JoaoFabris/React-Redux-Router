@@ -3,7 +3,6 @@ import './index.css'
 interface PokCardProps {
   name: string;
   sprites: { front_default: string };
-  weight: number;
   onClick: () => void;
 }
 

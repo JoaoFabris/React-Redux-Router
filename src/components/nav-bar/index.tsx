@@ -6,6 +6,8 @@ function NavBar() {
     <nav>
       <img src="/src/assets/pokeball-pokemon.svg" width={35} alt="pokemon logo" />
       <NavLink to="/">Home</NavLink>
+      <NavLink to="/pokemon">Pokemon</NavLink>
+      <NavLink to='/favorites'>Favorites</NavLink>
       <NavLink to="/about">About</NavLink>
       <img src="/src/assets/pokeball-pokemon.svg" width={35} alt="pokemon logo" />
     </nav>
