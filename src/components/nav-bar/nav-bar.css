@@ -2,6 +2,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 3px;
   background-color:cornsilk;
   border-radius: 30px;
 }
