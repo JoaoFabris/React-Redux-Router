@@ -1,17 +1,22 @@
-import React from "react";
-import { CiHeart } from "react-icons/ci";
+import { useSelector } from "react-redux";
+import { ReduxState } from "../../types";
+import FavPokCard from "../../components/FavPokCard";
+import './index.css'
 
 function FavsPokemon() {
+  const { favorites } = useSelector((state: ReduxState) => state);
+
   return (
     <div>
-      <h1> favs</h1>
-      <CiHeart />
+      <h2>My Favorite Pokémon</h2>
+      <div className="favorites-container">
+        {/* Map through favorites and render FavoritePokCard */}
+        {favorites.map((pokemon, index) => (
+          <FavPokCard key={index} pokemon={pokemon} />
+        ))}
+      </div>
     </div>
   );
 }
 
 export default FavsPokemon;
-
-{/* <button className="favs" onClick={() => handleToggleFav(selectedPokemon)}>
-          {favorites.includes(selectedPokemon) ? "Remove" : "Fav"}
-        </button> */}
