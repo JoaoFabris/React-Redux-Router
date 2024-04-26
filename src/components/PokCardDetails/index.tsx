@@ -20,7 +20,7 @@ function PokCardDetails() {
   };
 
   const handleToggleFav = (favorite: PokemonType) => {
-    if (favorites.includes(favorite)) {
+    if (favorites?.includes(favorite)) {
       dispatch(removeFavorite(favorite));
     } else {
       dispatch(addFavorite(favorite));
@@ -28,7 +28,7 @@ function PokCardDetails() {
   };
 
   const isFavorite = selectedPokemon
-    ? favorites.includes(selectedPokemon)
+    ? favorites?.includes(selectedPokemon)
     : false;
 
   const typeColor = {

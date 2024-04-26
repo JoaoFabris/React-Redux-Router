@@ -14,8 +14,8 @@ function pokeReducer(
   action: {
     type: string;
     pokemon?: PokemonType[];
-    selectedPokemon?: PokemonType;
-    error?: string;
+    selectedPokemon?: PokemonType | null;
+    error?: string | null;
     favorites?: PokemonType[];
   }
 ) {
@@ -46,7 +46,7 @@ function pokeReducer(
     case ActionTypes.ADD_FAVORITE:
       return {
         ...state,
-        favorites: [...state.favorites, action.pokemon],
+        favorites: [...(state.favorites ?? []), action.pokemon!],
         errorMessage: null,
       };
 
@@ -54,7 +54,7 @@ function pokeReducer(
         return {
           ...state,
           errorMessage: null,
-          favorites: state.favorites.filter(pokemon => pokemon !== action.pokemon as unknown as PokemonType)
+          favorites: state.favorites?.filter(pokemon => pokemon !== action.pokemon as unknown as PokemonType)
         };
 
     case ActionTypes.REQUEST_FAILED:

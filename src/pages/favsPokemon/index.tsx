@@ -10,13 +10,16 @@ function FavsPokemon() {
     <div>
       <h2>My Favorite Pokémon</h2>
       <div className="favorites-container">
-        {/* Map through favorites and render FavoritePokCard */}
-        {favorites.map((pokemon, index) => (
-          <FavPokCard key={index} pokemon={pokemon} />
+        {favorites?.map((pokemonOrArray, index) => (
+          <FavPokCard
+            key={index}
+            pokemon={Array.isArray(pokemonOrArray) ? pokemonOrArray[0] : pokemonOrArray}
+          />
         ))}
       </div>
     </div>
   );
 }
+
 
 export default FavsPokemon;

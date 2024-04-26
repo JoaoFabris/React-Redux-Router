@@ -6,7 +6,7 @@ export type ReduxState = {
   isFetching: boolean;
   errorMessage: string | null;
   selectedPokemon: PokemonType | null;
-  favorites: PokemonType[]
+  favorites: (PokemonType | PokemonType[])[];
 };
 
 export interface PokemonType {
