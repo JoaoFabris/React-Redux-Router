@@ -3,7 +3,7 @@ function About() {
   
   return (
     <>
-      <h1>About</h1>
+      <h1>project using react-redux and router</h1>
     </>
   );
 }
