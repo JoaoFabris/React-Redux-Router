@@ -3,7 +3,7 @@ import { Dispatch, PokemonType, ReduxState } from "../../types";
 import { fetchPokemonApi, selectPokemon } from "../../redux/actions";
 import PokCard from "../../components/PokCard";
 import { Link } from "react-router-dom";
-import "./index.css"
+import "./index.css";
 
 function Pokemon() {
   const { pokemon, isFetching, errorMessage } = useSelector(
@@ -24,8 +24,8 @@ function Pokemon() {
     <div>
       <button onClick={() => dispatch(fetchPokemonApi())}>Fetch Pokemon</button>
       <div className="pok-container">
-      {pokemon ? (
-        pokemon.map((p, key) => (
+        {pokemon ? (
+          pokemon.map((p, key) => (
             <Link key={key} to={`/pokemon/${p.name}`}>
               <PokCard
                 name={p.name}
@@ -34,10 +34,12 @@ function Pokemon() {
                 onClick={() => handlePokemonClick(p)}
               />
             </Link>
-        ))
-      ) : (
-        <p>Discover the Pokemon universe</p>
-      )}
+          ))
+        ) : (
+          <div>
+            <img src="/src/assets/all-pokemon-pictures-bh730s8zr74xsc2p.jpg" alt="" />
+          </div>
+        )}
       </div>
     </div>
   );
